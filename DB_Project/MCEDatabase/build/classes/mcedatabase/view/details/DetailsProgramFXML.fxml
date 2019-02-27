@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcedatabase.controller.details.DetailsProgramFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.34296028880866425" layoutY="29.0" prefHeight="535.0" prefWidth="848.0">
+        <items>
+          <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="61.0" text="ID : " />
+                  <Label layoutX="22.0" layoutY="91.0" text="Name :" />
+                  <Label layoutX="22.0" layoutY="118.0" text="Location :" />
+                  <Label layoutX="22.0" layoutY="150.0" text="Start date : " />
+                  <Label layoutX="22.0" layoutY="187.0" text="End date : " />
+                  <Label layoutX="22.0" layoutY="226.0" text="Description :" />
+                  <Text fx:id="textId" layoutX="145.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textId" />
+                  <Text fx:id="textName" layoutX="145.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textName" />
+                  <Text fx:id="textLocation" layoutX="145.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textLocation" />
+                  <Text fx:id="textSD" layoutX="145.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textSD" />
+                  <Text fx:id="textED" layoutX="145.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textED" />
+                  <TextFlow layoutX="22.0" layoutY="267.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="textDesc" strokeType="OUTSIDE" strokeWidth="0.0" text="textDesc" />
+                     </children>
+                  </TextFlow>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxWidth="533.0" minHeight="533.0" minWidth="0.0" prefHeight="394.0" prefWidth="411.0">
+               <children>
+                  <Label layoutX="198.0" layoutY="14.0" text="Participants">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="10.0" layoutY="58.0" prefHeight="458.0" prefWidth="519.0" AnchorPane.topAnchor="58.0">
+                     <children>
+                        <TableView fx:id="tableviewDPP" layoutX="4.0" prefHeight="458.0" prefWidth="511.0">
+                          <columns>
+                            <TableColumn fx:id="columnDPId" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="columnDPFirstname" prefWidth="166.0" text="Firstname" />
+                              <TableColumn fx:id="columnDPLastname" prefWidth="149.0" text="Lastname" />
+                              <TableColumn fx:id="columnDPCountry" prefWidth="120.0" text="Country" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

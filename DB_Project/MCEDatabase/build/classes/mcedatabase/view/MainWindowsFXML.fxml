@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcedatabase.controller.MainWindowsFXMLController">
+   <stylesheets>
+        <URL value="@/mcedatabase/css/modena_dark.css" />
+    </stylesheets>
+    <children>
+      <MenuBar prefHeight="29.0" prefWidth="1006.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="25.0" prefHeight="587.0" prefWidth="1006.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="main" text="Main">
+            <content>
+              <fx:include fx:id="mainTab" source="tabs/MainTabFXML.fxml" />
+            </content>
+          </Tab>
+          <Tab fx:id="volunteer" text="Volunteer">
+            <content>
+              <fx:include fx:id="volunteerTab" source="tabs/VolunteerTabFXML.fxml" />
+            </content>
+          </Tab>
+            <Tab fx:id="program" text="Program">
+              <content>
+                <fx:include fx:id="programTab" source="tabs/ProgramTabFXML.fxml" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="programTab" minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcedatabase.controller.tabs.ProgramTabFXMLController">
+    <children>
+        <TableView fx:id="tableProgram" layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="972.0">
+            <columns>
+                <TableColumn fx:id="columnProgramId" prefWidth="46.0" text="ID" />
+                <TableColumn fx:id="columnProgramName" prefWidth="251.0" text="Name" />
+                <TableColumn fx:id="columnProgramLocation" prefWidth="158.0" text="Location" />
+                <TableColumn fx:id="columnProgramSD" prefWidth="142.0" text="Start date" />
+                <TableColumn fx:id="columnProgramED" prefWidth="134.0" text="End date" />
+                <TableColumn fx:id="columnProgramDesc" prefWidth="240.0" text="Description" />
+            </columns>
+        </TableView>
+        <Button fx:id="buttonProgramDetail" layoutX="37.0" layoutY="513.0" mnemonicParsing="false" onAction="#onActionProgramDetail" text="Detail" />
+        <Button fx:id="buttonProgramUpdate" layoutX="114.0" layoutY="513.0" mnemonicParsing="false" onAction="#onActionProgramUpdate" text="Update" />
+        <Button fx:id="buttonProgramDelete" layoutX="198.0" layoutY="513.0" mnemonicParsing="false" onAction="#onActionProgramDelete" text="Delete" />
+    </children>
+</AnchorPane>

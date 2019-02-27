@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcedatabase.controller.details.DetailsVolunteerFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.34296028880866425" layoutX="5.0" layoutY="10.0" prefHeight="518.0" prefWidth="1088.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="425.0" prefHeight="160.0" prefWidth="425.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="36.0" text="ID : " />
+                  <Label layoutX="22.0" layoutY="91.0" text="Lastname : " />
+                  <Label layoutX="22.0" layoutY="119.0" text="IC : " />
+                  <Label layoutX="22.0" layoutY="150.0" text="Nationality : " />
+                  <Label layoutX="22.0" layoutY="186.0" text="University : " />
+                  <Label layoutX="22.0" layoutY="222.0" prefHeight="17.0" prefWidth="69.0" text="Country : " />
+                  <Label layoutX="22.0" layoutY="328.0" text="Email : " />
+                  <Label layoutX="22.0" layoutY="254.0" prefHeight="17.0" prefWidth="69.0" text="Course : " />
+                  <Label layoutX="22.0" layoutY="291.0" prefHeight="17.0" prefWidth="69.0" text="Tel :" />
+                  <Text fx:id="textID" layoutX="120.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textID" />
+                  <Text fx:id="textLastname" layoutX="120.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textLastname" />
+                  <Text fx:id="textIC" layoutX="120.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textIC" />
+                  <Text fx:id="textNationality" layoutX="120.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textNationality" />
+                  <Text fx:id="textUniversity" layoutX="120.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textUniversity" />
+                  <Text fx:id="textCountry" layoutX="120.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textCountry" />
+                  <Text fx:id="textCourse" layoutX="120.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textCourse" />
+                  <Text fx:id="textTel" layoutX="120.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textTel" />
+                  <Text fx:id="textEmail" layoutX="120.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textEmail" />
+                  <Label layoutX="22.0" layoutY="61.0" text="Firstname :" />
+                  <Text fx:id="textFirstname" layoutX="120.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textFirstname" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="675.0" prefHeight="510.0" prefWidth="675.0">
+               <children>
+                  <Label layoutX="216.0" layoutY="14.0" text="Programs">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="6.0" layoutY="62.0" prefHeight="434.0" prefWidth="511.0" AnchorPane.topAnchor="62.0">
+                     <children>
+                        <TableView fx:id="tableProgramDetailsVol" layoutX="14.0" layoutY="14.0" prefHeight="412.0" prefWidth="487.0">
+                          <columns>
+                            <TableColumn fx:id="columnVDId" prefWidth="92.0" text="ID" />
+                            <TableColumn fx:id="columnVDName" prefWidth="271.0" text="Name" />
+                              <TableColumn fx:id="columnVDSD" prefWidth="123.0" text="Start date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Pane>
+                  <Text layoutX="512.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a program to the volunteer" wrappingWidth="160.13720703125" />
+                  <Button layoutX="529.0" layoutY="207.0" mnemonicParsing="false" onAction="#onActionDVAddprogram" prefHeight="41.0" prefWidth="127.0" text="Add program" />
+                  <ChoiceBox fx:id="choiceboxDV" layoutX="517.0" layoutY="140.0" prefWidth="150.0" />
+                  <Button layoutX="529.0" layoutY="289.0" mnemonicParsing="false" onAction="#onActionDeleteprogram" prefHeight="41.0" prefWidth="127.0" text="Delete program" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
