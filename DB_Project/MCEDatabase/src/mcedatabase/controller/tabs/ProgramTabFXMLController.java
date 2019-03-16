@@ -166,7 +166,22 @@ public class ProgramTabFXMLController implements Initializable {
 
     @FXML
     void onActionProgramUpdate(ActionEvent event) {
-            MainWindowsFXMLController.displayWarningMessage("Error", "Not yet implemented!");
+           
+        if(this.tableProgram.getSelectionModel().getSelectedItem() != null)
+        {
+            LibrarySingleton.program_instance = this.tableProgram.getSelectionModel().getSelectedItem();
+            
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mcedatabase/view/updates/UpdateProgramFXML.fxml"));
+                Stage stage = MainWindowsFXMLController.createModalWindows("Program's detail", fxmlLoader, ((Node) event.getSource()).getScene().getWindow());
+                stage.showAndWait();
+            }catch(IOException ex){
+                MainWindowsFXMLController.displayErrorMessage("Error", ex.getMessage());
+            }
+            
+        }else{
+            MainWindowsFXMLController.displayErrorMessage("Error", "Please selcet a program");
+        }
     }
     
 }

@@ -189,9 +189,9 @@ public class ProgramDbDao implements ProgramDao{
             
             Connection con = DBSingleton.con;
             Statement stmt = con.createStatement();
-            String query = "UPDATE PROGRAM " +
-                    "SET name="+prog.getName()+','+"location="+prog.getLocation()+','+"dateStart="+dateStart+','+"dateEnd="+dateEnd+','+prog.getDescription()
-                    +" WHERE idProgram="+prog.getId();
+            String query = "UPDATE Program " +
+                    "SET name="+"\'"+prog.getName()+"\'"+','+"location="+"\'"+prog.getLocation()+"\'"+','+"dateStart="+"\'"+dateStart+"\'"+','+"dateEnd="+"\'"+dateEnd+"\'"+','+"description="+"\'"+prog.getDescription()
+                    +"\'"+" WHERE idProgram="+prog.getId();
             
             int update = stmt.executeUpdate(query);
             

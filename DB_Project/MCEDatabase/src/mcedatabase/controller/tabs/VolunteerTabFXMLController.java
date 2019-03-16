@@ -197,7 +197,25 @@ public class VolunteerTabFXMLController implements Initializable{
      */
     @FXML
     void onActionVolunteerUpdate(ActionEvent event) {
-        MainWindowsFXMLController.displayWarningMessage("Error", "Not yet implemented!");
+
+        if (this.tableVolunteer.getSelectionModel().getSelectedItem() != null) {
+            
+            LibrarySingleton.volunteer_instance = this.tableVolunteer.getSelectionModel().getSelectedItem();
+            
+            try {
+
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mcedatabase/view/updates/UpdateVolunteerFXML.fxml"));
+                Stage stage = MainWindowsFXMLController.createModalWindows("Update", fxmlLoader, ((Node) event.getSource()).getScene().getWindow());
+                stage.showAndWait();
+
+            } catch (IOException ex) {
+                MainWindowsFXMLController.displayErrorMessage("Error", ex.getMessage());
+            }
+        } else {
+            MainWindowsFXMLController.displayErrorMessage("Error", "Please select a volunteer");
+        }
+
+        
     }
     
     /**

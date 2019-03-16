@@ -198,9 +198,9 @@ public class VolunteerDbDao implements VolunteerDao{
             Connection con = DBSingleton.con;
             Statement stmt = con.createStatement();
             String query = "UPDATE Volunteer " + 
-                            "SET firstname="+vol.getFirstname()+','+"lastname="+vol.getLastname()+','+"tel="+vol.getTel()
-                           +','+"ic="+vol.getIc()+','+"email="+vol.getEmail()+','+"nationality="+vol.getNationality()
-                           +','+"university="+vol.getUniversity()+','+"country="+vol.getCountry()+','+"course="+vol.getCourse()+" "
+                            "SET firstname="+"\'"+vol.getFirstname()+"\'"+','+"lastname="+"\'"+vol.getLastname()+"\'"+','+"tel="+"\'"+vol.getTel()
+                           +"\'"+','+"ic="+"\'"+vol.getIc()+"\'"+','+"email="+"\'"+vol.getEmail()+"\'"+','+"nationality="+"\'"+vol.getNationality()
+                           +"\'"+','+"university="+"\'"+vol.getUniversity()+"\'"+','+"country="+"\'"+vol.getCountry()+"\'"+','+"course="+"\'"+vol.getCourse()+"\'"+" "
                            +"WHERE idVolunteer="+vol.getId();
             
             int update = stmt.executeUpdate(query);
@@ -209,6 +209,8 @@ public class VolunteerDbDao implements VolunteerDao{
             {
                 System.out.println("Update impossible !");
             }
+           
+           
             
             stmt.close();
             
