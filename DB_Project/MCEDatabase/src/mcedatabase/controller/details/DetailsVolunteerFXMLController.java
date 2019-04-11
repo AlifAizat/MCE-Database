@@ -176,6 +176,10 @@ public class DetailsVolunteerFXMLController implements Initializable {
             this.volunteer.getPrograms().add(choiceboxDV.getSelectionModel().getSelectedItem());
             this.setTableProgramDetailsVol();
             this.setChoiceboxDV();
+            
+            LibrarySingleton.getMaintab_instance().updateStatistic();
+            LibrarySingleton.getVolunteertab_instance().setTableVolunteer();
+            
         }else{
             MainWindowsFXMLController.displayErrorMessage("Error", "Please select a program to be added");
         }

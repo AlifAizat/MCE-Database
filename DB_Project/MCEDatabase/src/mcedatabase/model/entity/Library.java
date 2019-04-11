@@ -25,27 +25,47 @@ public class Library {
         this.volunteers = new ArrayList<>();
         this.user = System.getProperty("user.name");
     }
-
+    
+    /*
+    * return a list of Volunteer
+    * List<Volunteer>
+    */
     public List<Volunteer> getVolunteers() {
         return volunteers;
     }
-
+    
+    /*
+    * set the instance of list of Volunteer
+    */
     public void setVolunteers(List<Volunteer> volunteers) {
         this.volunteers = volunteers;
     }
 
+    /*
+    * return a list of Program
+    * List<Program>
+    */
     public List<Program> getPrograms() {
         return programs;
     }
 
+    /*
+    * set the instance of list of Program
+    */
     public void setPrograms(List<Program> programs) {
         this.programs = programs;
     }
-
+    
+    /*
+    * return a String of name of the connected user
+    */
     public String getUser() {
         return user;
     }
     
+    /*
+    * Delete a Volunteer from the list of Volunteer
+    */
     public void deleteVolunteer(Volunteer vol){
         for(Program p : vol.getPrograms())
         {
@@ -54,6 +74,9 @@ public class Library {
         this.volunteers.remove(vol);
     }
     
+    /*
+    * Delete a Program from the list of Program
+    */
     public void deleteProgram(Program prog){
         for(Volunteer v : prog.getParticipants())
         {
@@ -63,6 +86,9 @@ public class Library {
         this.programs.remove(prog);
     }
 
+    /*
+    * 
+    */
     public List<Participation> getParticipations() {
         return participations;
     }
@@ -100,12 +126,5 @@ public class Library {
         
         return prog;
     }
-     /*
-    public void updateVolunteer(Volunteer vol){
-        for(Volunteer v : this.volunteers)
-        {
-            if(v.getId() == vol.get)
-        }
-    }
-    */
+    
 }

@@ -6,7 +6,6 @@
 package mcedatabase.controller.updates;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -117,6 +116,8 @@ public class UpdateVolunteerFXMLController implements Initializable {
 
     @FXML
     void onActionCancel(ActionEvent event) {
+
+        this.stage = (Stage) buttonUpdate.getScene().getWindow();
         this.stage.close();
     }
 
@@ -136,10 +137,12 @@ public class UpdateVolunteerFXMLController implements Initializable {
             
             DBSingleton.dbDaoFactory.getVolunteerDao().update(LibrarySingleton.volunteer_instance);
             LibrarySingleton.getVolunteertab_instance().setTableVolunteer();
+            
+            this.stage = (Stage) buttonUpdate.getScene().getWindow();
             this.stage.close();
 
         } else {
-            MainWindowsFXMLController.displayErrorMessage("Error!", "Please fill this field : \n" + this.buff);
+            MainWindowsFXMLController.displayErrorMessage("Warning !", "Please fill this field : \n" + this.buff);
         }
     }
     

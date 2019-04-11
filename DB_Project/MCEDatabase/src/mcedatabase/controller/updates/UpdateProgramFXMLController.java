@@ -123,7 +123,7 @@ public class UpdateProgramFXMLController implements Initializable {
             this.stage.close();
 
         }else{
-            MainWindowsFXMLController.displayErrorMessage("Error ! ", buff);
+            MainWindowsFXMLController.displayErrorMessage("Warning ! ", buff);
         }
     }
     

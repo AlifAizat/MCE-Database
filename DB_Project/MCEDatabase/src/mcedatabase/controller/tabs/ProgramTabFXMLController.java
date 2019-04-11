@@ -142,7 +142,7 @@ public class ProgramTabFXMLController implements Initializable {
             this.parent.getVolunteerTabFXMLController().setVolunteers(FXCollections.observableArrayList(mceLibray.getVolunteers()));
             System.out.println("Delete program : succes");
         }else{
-            MainWindowsFXMLController.displayErrorMessage("Error", "Please select a program");
+            MainWindowsFXMLController.displayErrorMessage("Error", "Please select a program that you would like to delete");
         }
     }
 
@@ -160,7 +160,7 @@ public class ProgramTabFXMLController implements Initializable {
                 MainWindowsFXMLController.displayErrorMessage("Error", ex.getMessage());
             }
         }else{
-            MainWindowsFXMLController.displayErrorMessage("Error", "Please selcet a program");
+            MainWindowsFXMLController.displayErrorMessage("Warning !", "Please selcet a program that you would like to view");
         }
     }
 
@@ -180,7 +180,7 @@ public class ProgramTabFXMLController implements Initializable {
             }
             
         }else{
-            MainWindowsFXMLController.displayErrorMessage("Error", "Please selcet a program");
+            MainWindowsFXMLController.displayErrorMessage("Error", "Please selcet a program that you would like to update");
         }
     }
     

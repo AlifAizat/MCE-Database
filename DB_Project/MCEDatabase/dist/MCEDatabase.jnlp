@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="MCEDatabase.jar" size="62265" download="eager" />
+    <jar href="MCEDatabase.jar" size="62635" download="eager" />
     <jar href="lib/hamcrest-core-1.3.jar" size="45280" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="834091" download="eager" />
     <jar href="lib/mysql-connector-java-8.0.14.jar" size="2134907" download="eager" />
