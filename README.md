@@ -1,2 +1,2 @@
 # MCE-Database
-Project for MCE database
+Project for MCE database using JavaFX
